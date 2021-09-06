@@ -6,5 +6,6 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular ' + VERSION.major;
+ dob = new Date(1990,5,4); 
+ salary:number= 100000;
 }

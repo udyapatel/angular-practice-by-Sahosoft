@@ -1,4 +1,9 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div> 
+{{dob}}<br>
+<br>
+Medium: {{dob|date: "medium"}} <br><br>
+Specific formate : {{dob|date: "dd/MM/YYYY"}}
+<br>
+<br>
+Salary == {{salary|currency:"USD":true}}
+</div>
