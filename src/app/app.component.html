@@ -1,9 +1,36 @@
 <div> 
 {{dob}}<br>
-<br>
-Medium: {{dob|date: "medium"}} <br><br>
+
+Medium: {{dob|date: "medium" | uppercase}} <br>
 Specific formate : {{dob|date: "dd/MM/YYYY"}}
 <br>
-<br>
 Salary == {{salary|currency:"USD":true}}
+<br>
+Name: {{name | titlecase}}<br>
+Postion: {{position | lowercase}}<br>
+Work: {{work | uppercase}}<br>
+Short Date pipe Example : {{currentDate | date: "shortDate"}}<br>
+Long Date pipe Example : {{currentDate | date: "longDate"}}<br>
+Full Date pipe Example : {{currentDate | date: "fullDate" | uppercase}}<br>
+Percent Pipe example: {{myNum | percent : '1.5-8'}}<br>
+Decimal Pipe example: {{myNum | number:'2.5-9' }}<br>
+Currency Pipe Example: {{myNum | currency : "INR"}}<br>
+<h3>Json Pipe Example</h3>
+<div>
+{{employees | json}}
+</div>
+<div>
+{{employees  | slice:1 | json }}
+</div>
+
+</div>
+<div><h1>Custom Pipe Example</h1>
+<table border="1px">
+<tr *ngFor="let employee of employees">
+<td>{{employee.id}}</td>
+<td>{{employee.name | custom:employee.gender}}</td>
+<td>{{employee.gender}}</td>
+<td>{{employee.salary}}</td>
+</tr>
+</table>
 </div>
