@@ -8,11 +8,15 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { CustomPipe } from './custom.pipe';
 import { AppRoutingModule } from './app-routing.module';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AppRoutingModule,FormsModule,ReactiveFormsModule ],
-  declarations: [ AppComponent, HelloComponent ,CustomPipe,StudentComponent,StudentDetailsComponent],
+  declarations: [ AppComponent, HelloComponent ,CustomPipe,
+    StudentComponent,StudentDetailsComponent,SignUpComponent,HomeComponent
+  ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
