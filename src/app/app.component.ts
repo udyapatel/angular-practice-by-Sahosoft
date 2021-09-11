@@ -1,4 +1,5 @@
 import { Component, VERSION } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'my-app',
@@ -28,5 +29,9 @@ export class AppComponent  {
 }
 ];
 
+constructor(private router:Router){}
+onClick(){
+  this.router.navigate(['/student']);
+}
 
 }
