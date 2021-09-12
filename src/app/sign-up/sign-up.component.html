@@ -1,16 +1,39 @@
-<form>
+
+<div class="container">
+  <div class="row">
+    <div class="form-bg">
+   
+<form  [formGroup]='myForm' (ngSubmit)="register(myForm)">
   <div class="form-group">
+  <label for="exampleInputFname">First Name </label>
+  <input type="text" class="form-control" formControlName="fname" placeholder="Enter First Name">
+</div>
+
+<div class="form-group">
+<label for="exampleInputLname">Last Name</label>
+<input type="text" class="form-control" formControlName="lname" placeholder="Enter Last Name">
+<!-- <span *ngIf="myForm.controls['fname'].invalid && (myForm.controls['fname'].dirty || myForm.controls['fname'].touched)" class="alert alert-danger form-danger" role="alert">
+
+</span> -->
+<!-- <span *ngIf="!myForm.controls['fname'].errors.required">
+Required
+</span> -->
+</div>
+
+<div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <input type="email" class="form-control" formControlName="email" placeholder="Enter email">
   </div>
+
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="password" class="form-control" formControlName="password" placeholder="Password">
   </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+ <div>
+  <button type="submit" class="btn btn-primary" (click)="register(myForm)" [disabled]='!myForm.valid'>Submit</button>
+  <input class="btn btn-secondary pull-right" type="reset" value="Reset">
+ </div>
 </form>
+    </div>
+  </div>
+  </div>
