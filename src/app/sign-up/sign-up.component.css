@@ -1,3 +1,13 @@
+.container{
+
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid rgb(100, 96, 96);
+  border-radius: 5px;
+  margin-bottom: auto;
+}
+
+
 input ng-invalid ng-touched{
 border: 1px solid red;
 }
