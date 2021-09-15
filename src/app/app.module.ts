@@ -11,12 +11,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ContactNoComponent } from './contact-no/contact-no.component';
+
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AppRoutingModule,FormsModule,ReactiveFormsModule ],
   declarations: [ AppComponent, HelloComponent ,CustomPipe,
-    StudentComponent,StudentDetailsComponent,SignUpComponent,HomeComponent,NavbarComponent
+    StudentComponent,StudentDetailsComponent,SignUpComponent,HomeComponent,NavbarComponent,
+    ContactNoComponent
   ],
   bootstrap:    [ AppComponent ]
 })

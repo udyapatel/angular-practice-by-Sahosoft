@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators,FormArray } from '@angular/forms';
 import { Student } from '../student';
 
 @Component({
@@ -34,6 +34,16 @@ student:Student=new Student();
     //     console.log('fname changed:' +uname);
     //   }
     // )
+    
+//FormArray example
+    // const array1=new FormArray([
+    //   new FormControl(),
+    //   new FormControl()
+  
+    // ]);
+    // array1.setValue(['Shiwangi', 'Singh']);
+    // console.log(array1.value);
+    // console.log(array1.status);
 
  this.myForm.get('email').statusChanges.subscribe(
       status =>{

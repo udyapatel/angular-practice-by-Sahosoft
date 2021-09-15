@@ -1,0 +1,13 @@
+<div class="container">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()"> 
+<div fromArrayName="contactNos">
+  <div *ngFor="let contact of contactForm.controls.contactNos.controls; index as i">
+    <input [formControlName]="i" placeholder="Contact No">
+  </div>
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <button type="submit" class="btn btn-success" (click)="addContactNo()">Add Contact No</button>
+  <button class="btn btn-secondary" (click)="setPreset()">Set Preset</button>
+</div>
