@@ -1,6 +1,31 @@
 <h2>Book List</h2>
-<ul >
+<!-- <ul >
 <li *ngFor="let book of softBooks | async">
-Id:{{book.id}},Name:{{book.name}},Category:{{book.category}}
+Id:{{book.id}},   Name:{{book.name}},  Category:{{book.category}}
 </li>
-</ul>
+</ul>  -->
+<div class="table-responsive">
+<table class="table table-bordered" border="3px">
+  <tr class="table-active">
+  <td>Id</td>
+  <td>Book Name</td>
+  <td>Book Category</td>
+  </tr>
+<tr *ngFor="let book of softBooks | async">
+  <td>{{book.id}}</td>
+  <td>{{book.name}}</td>
+  <td>{{book.category}}</td>
+</tr>
+</table>
+</div>
+
+<div class="container"> 
+  <div *ngIf="softsBooks | async as x else loading"> 
+  Id:{{x.id}},   Name:{{x.name}},  Category:{{x.category}}
+  </div>
+
+</div>
+
+<ng-template #loading>
+<img src="https://img.freepik.com/free-vector/loading-icon_167801-436.jpg?size=338&ext=jpg" alt="image">
+</ng-template>

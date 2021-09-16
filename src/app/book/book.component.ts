@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable,map } from 'rxjs';
 import { Book } from '../../book';
 import { BookService } from '../book.service';
 
@@ -10,20 +10,29 @@ import { BookService } from '../book.service';
 })
 export class BookComponent implements OnInit {
 softBooks:Observable<Book[]>;
-// softBook:Book[];
+softsBooks:Observable<Book>;
+// books=Observable<String>;
+ softBook:Book[];
   constructor(private bookService:BookService) { }
 
   ngOnInit() {
-
-    this.getSoftBooks();
+   this.getSoftBooksById();
+   this.getSoftBooks();
+   
   }
-  // getSoftBooks(){
-  //   this.bookService.getBooksFromStore().
-  //   subscribe(books => this.softBook=books
-  //     );
-  // }
+  getAllBooks(){
+    this.bookService.getBooksFromStore().
+    subscribe(books => this.softBook=books
+      );
+  }
 
   getSoftBooks(){
     this.softBooks= this.bookService.getBooksFromStore();
   }
+  getSoftBooksById(){
+    this.softsBooks= this.bookService.getBooksFromStores(11);
+  }
+  // getBooksById(){
+  //   this.books= this.bookService.getBooksFromStores(11).map(book=> book.name);
+  // }
 }
