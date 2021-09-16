@@ -1,0 +1,6 @@
+<h2>Book List</h2>
+<ul >
+<li *ngFor="let book of softBooks | async">
+Id:{{book.id}},Name:{{book.name}},Category:{{book.category}}
+</li>
+</ul>
