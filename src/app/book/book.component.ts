@@ -18,6 +18,7 @@ softsBooks:Observable<Book>;
   ngOnInit() {
    this.getSoftBooksById();
    this.getSoftBooks();
+   this.getAllBooks();
    
   }
   getAllBooks(){
@@ -25,7 +26,7 @@ softsBooks:Observable<Book>;
     subscribe(books => this.softBook=books
       );
   }
-
+//by using Async pipe
   getSoftBooks(){
     this.softBooks= this.bookService.getBooksFromStore();
   }
