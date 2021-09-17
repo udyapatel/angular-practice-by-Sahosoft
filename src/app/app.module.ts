@@ -17,6 +17,7 @@ import { BookComponent } from './book/book.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { AddBookComponent } from './add-book/add-book.component';
 
 
 
@@ -29,7 +30,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 
    declarations: [ AppComponent, HelloComponent ,CustomPipe,
     StudentComponent,StudentDetailsComponent,SignUpComponent,HomeComponent,NavbarComponent,
-    ContactNoComponent,BookComponent,
+    ContactNoComponent,BookComponent,AddBookComponent
   ],
   bootstrap:    [ AppComponent ],
   providers:[BookService,]
