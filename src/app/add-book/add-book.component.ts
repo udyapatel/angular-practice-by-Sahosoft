@@ -44,6 +44,7 @@ export class AddBookComponent implements OnInit {
     this.bookForm = this.formbuilder.group({
       name: new FormControl('', [Validators.required]),
       category: new FormControl('', [Validators.required]),
+      author:new FormControl('', [Validators.required]),
     });
     this.getAllBooks();
   }

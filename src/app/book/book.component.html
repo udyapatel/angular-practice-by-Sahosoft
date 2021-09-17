@@ -12,6 +12,7 @@ Id:{{book.id}},   Name:{{book.name}},  Category:{{book.category}}
           <th>Id</th>
           <th>Book Name</th>
           <th>Book Category</th>
+          <th>Book Author</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -20,10 +21,10 @@ Id:{{book.id}},   Name:{{book.name}},  Category:{{book.category}}
           <td>{{ book.id }}</td>
           <td>{{ book.name }}</td>
           <td>{{ book.category }}</td>
-          <td class="d-grid gap-2 d-md-flex">
-            <a class="btn btn-primary" (click)="addBook()" role="button"
-              >Add Book</a
-            >
+          <td>{{ book.author }}</td>
+          <td class="s-grid gap-2 d-md-flex">
+            <a class="btn btn-primary" (click)="addBook()" role="button">Add Book</a>
+            <a class="btn btn-success" (click)="editBook()" role="button">Update Book</a>
             <a class="btn btn-danger" routerLink="add-book" role="button"
               >Delete</a
             >

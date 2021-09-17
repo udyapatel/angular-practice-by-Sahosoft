@@ -9,6 +9,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { StudentComponent } from './student/student.component';
+import { UpdateBookComponent } from './update-book/update-book.component';
 
 const routes: Routes = [
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'sign-up', component: SignUpComponent },
   { path: 'book-list', component: BookComponent },
   { path: 'create-book', component: AddBookComponent },
+  { path: 'edit-book', component: UpdateBookComponent },
   // { path: 'contact-us', component: ContactNoComponent },
   { path: '**',  component: PageNotFoundComponent},
 ];

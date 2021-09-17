@@ -27,6 +27,11 @@ softsBooks:Observable<Book>;
   addBook(){
     this.router.navigate(['create-book']);
   }
+  editBook(){
+    this.router.navigate(['edit-book']);
+  }
+
+
   getAllBooks(){
     this.bookService.getBooksFromStore().
     subscribe(books => this.softBook=books
