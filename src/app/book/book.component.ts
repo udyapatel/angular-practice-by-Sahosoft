@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Observable,map } from 'rxjs';
 import { Book } from '../../book';
 import { BookService } from '../book.service';
@@ -15,13 +16,16 @@ softsBooks:Observable<Book>;
 // books=Observable<String>;
  softBook:Book[];
 
-  constructor(private bookService:BookService) { }
+  constructor(private bookService:BookService,private router:Router) { }
 
   ngOnInit() {
    this.getSoftBooksById();
    this.getSoftBooks();
    this.getAllBooks();
    
+  }
+  addBook(){
+    this.router.navigate(['create-book']);
   }
   getAllBooks(){
     this.bookService.getBooksFromStore().

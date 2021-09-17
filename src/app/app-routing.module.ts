@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'student-details', component: StudentDetailsComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'book-list', component: BookComponent },
-  { path: 'add-book', component: AddBookComponent },
+  { path: 'create-book', component: AddBookComponent },
   // { path: 'contact-us', component: ContactNoComponent },
   { path: '**',  component: PageNotFoundComponent},
 ];
