@@ -27,8 +27,8 @@ softsBooks:Observable<Book>;
   addBook(){
     this.router.navigate(['create-book']);
   }
-  editBook(){
-    this.router.navigate(['edit-book']);
+  editBook(id:number){
+    this.router.navigate(['edit-book', id]);
   }
 
 

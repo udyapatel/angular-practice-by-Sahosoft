@@ -6,7 +6,7 @@ Id:{{book.id}},   Name:{{book.name}},  Category:{{book.category}}
 </ul>  -->
 <div class="container">
   <div class="table-responsive">
-    <table class="table table-bordered" border="3px">
+    <table class="table table-bordered" border="1px">
       <thead>
         <tr class="table-active">
           <th>Id</th>
@@ -24,10 +24,8 @@ Id:{{book.id}},   Name:{{book.name}},  Category:{{book.category}}
           <td>{{ book.author }}</td>
           <td class="s-grid gap-2 d-md-flex">
             <a class="btn btn-primary" (click)="addBook()" role="button">Add Book</a>
-            <a class="btn btn-success" (click)="editBook()" role="button">Update Book</a>
-            <a class="btn btn-danger" routerLink="add-book" role="button"
-              >Delete</a
-            >
+            <a class="btn btn-success" (click)="editBook(book.id)" role="button">Update Book</a>
+            <a class="btn btn-danger" routerLink="add-book" role="button">Delete</a>
           </td>
         </tr>
       </tbody>
