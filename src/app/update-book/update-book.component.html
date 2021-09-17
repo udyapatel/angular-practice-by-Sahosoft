@@ -3,8 +3,8 @@
 <div class="container">
   <div class="row">
     <div class="form-bg">
-      <form>
-      <!-- <form [formGroup]="bookForm" (ngSubmit)="onFormSubmit()"> -->
+
+      <form [formGroup]="bookForm" (ngSubmit)="onFormSubmit()">
         <div class="form-group">
           <label for="exampleInputFname">Book Name </label>
           <input
@@ -33,7 +33,7 @@
             placeholder="Enter Author Name"
           />
         </div>
-<br>
+        <br>
         <div class="d-grid gap-4 d-md-flex">
           <button
             type="submit"
@@ -43,7 +43,7 @@
             Submit
           </button>
         </div>
-        
+
       </form>
     </div>
   </div>

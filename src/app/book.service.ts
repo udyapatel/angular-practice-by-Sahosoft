@@ -27,10 +27,10 @@ export class BookService {
   }
 
   getBookById(bookId: string): Observable<Book> {
-    return this.http.get<Book>(this.url + '/' + bookId);
+    return this.http.get<Book>(this.url + "/" + bookId);
   }
   updateBook(book: Book): Observable<number> {
-    return this.http.put<number>(this.url +'/'+book, this.options);
+    return this.http.put<number>(this.url +'/'+book.id, book, this.options);
   }
 
    
