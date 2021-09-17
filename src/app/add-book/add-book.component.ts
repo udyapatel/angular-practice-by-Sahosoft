@@ -37,7 +37,7 @@ export class AddBookComponent implements OnInit {
       this.dataSaved = true;
       this.getAllBooks();
     });
-    // this.router.navigate(['book-list']);
+     this.router.navigate(['book-list']);
   }
 
   ngOnInit() {

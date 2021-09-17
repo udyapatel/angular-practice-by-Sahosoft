@@ -10,16 +10,16 @@ export class InMemoryDataService implements InMemoryDbService{
 
   createDb() {
     const books = [
-      { id: 11, name: 'Lost Archive' ,category:'Novel'},
-      { id: 12, name: 'Narco' ,category:'Novel'},
-      { id: 13, name: 'Bombasto',category:'Novel' },
-      { id: 14, name: 'Celeritas' ,category:'Novel'},
-      { id: 15, name: 'Magneta' ,category:'Novel' },
-      { id: 16, name: 'RubberMan' ,category:'Novel'},
-      { id: 17, name: 'Dynama' ,category:'Novel'},
-      { id: 18, name: 'Dr IQ' ,category:'Novel'},
-      { id: 19, name: 'Magma' ,category:'Novel'},
-      { id: 20, name: 'Tornado' ,category:'Novel'}
+      { id: 11, name: 'Lost Archive' ,category:'Novel',author:'Veleria Luiselli'},
+      { id: 12, name: 'Narco' ,category:'Novel',author:'Veleria Luiselli'},
+      { id: 13, name: 'Bombasto',category:'Novel' ,author:'Veleria Luiselli'},
+      { id: 14, name: 'Celeritas' ,category:'Novel' ,author:'Veleria Luiselli'},
+      { id: 15, name: 'Magneta' ,category:'Novel' ,author:'Veleria Luiselli'},
+      { id: 16, name: 'RubberMan' ,category:'Novel' ,author:'Veleria Luiselli'} ,
+      { id: 17, name: 'Dynama' ,category:'Novel' ,author:'Veleria Luiselli'},
+      { id: 18, name: 'Dr IQ' ,category:'Novel',author:'Veleria Luiselli'},
+      { id: 19, name: 'Magma' ,category:'Novel' ,author:'Veleria Luiselli'},
+      { id: 20, name: 'Tornado' ,category:'Novel',author:'Veleria Luiselli'}
     ];
     return {books};
   }
