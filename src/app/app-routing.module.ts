@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'sign-up', component: SignUpComponent },
   { path: 'book-list', component: BookComponent },
   { path: 'create-book', component: AddBookComponent },
-  { path: 'edit-book', component: UpdateBookComponent },
+  { path: 'edit-book/:id', component: UpdateBookComponent },
   // { path: 'contact-us', component: ContactNoComponent },
   { path: '**',  component: PageNotFoundComponent},
 ];

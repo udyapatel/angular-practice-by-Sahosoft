@@ -16,7 +16,9 @@ import { BookService } from '../book.service';
   styleUrls: ['./update-book.component.css']
 })
 export class UpdateBookComponent implements OnInit {
-bookToUpdate:string;
+ id:string;
+bookToUpdate:any;
+books:Book;
 bookForm: FormGroup;
 allBooks: Observable<Book[]>;
   constructor( private router: Router,
@@ -31,6 +33,7 @@ allBooks: Observable<Book[]>;
       category: new FormControl('', [Validators.required]),
       author:new FormControl('', [Validators.required]),
     });
+
     this.route.params.subscribe(param => {
       console.log(param)
       if(param && param.id){
@@ -42,14 +45,16 @@ allBooks: Observable<Book[]>;
         else this.router.navigate(['/book-list'])
       }
     })
-    // this.getBookUpdateById(this.bookId);
+  //  this.getBookUpdateById(this.id);
   }
 
 // getBookUpdateById(bookId:string){
 // this.bookService.getBookById(bookId).subscribe(
 // book => { 
 // this.bookToUpdate = bookId;
+
 // console.log(this.bookToUpdate);
+// //this.bookForm.controls['id'].setValue(book.id),
 // this.bookForm.controls['name'].setValue(book.name),
 // this.bookForm.controls['category'].setValue(book.category),
 // this.bookForm.controls['author'].setValue(book.author)
@@ -57,8 +62,11 @@ allBooks: Observable<Book[]>;
 // });
 // }
 updateBook(book: Book) {
-  this.bookService.updateBook(book).subscribe((book) => {
+  book.id= this.bookToUpdate;
+  this.bookService.updateBook(this.bookForm.value).subscribe(book => {
     this.getAllBooks();
+    console.log(this.updateBook);
+    this.bookToUpdate=null;
   });
    this.router.navigate(['book-list']);
 }
