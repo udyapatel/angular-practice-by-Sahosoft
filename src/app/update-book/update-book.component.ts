@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { Router ,ActivatedRoute} from '@angular/router';
 import { Observable } from 'rxjs';
+import { filter, shareReplay, switchMap } from 'rxjs/operators';
 import { Book } from '../../book';
 import { BookService } from '../book.service';
 
@@ -16,10 +17,11 @@ import { BookService } from '../book.service';
   styleUrls: ['./update-book.component.css']
 })
 export class UpdateBookComponent implements OnInit {
- id:string;
+
 bookToUpdate:any;
 books:Book;
 bookForm: FormGroup;
+books$: Observable<Book>;
 allBooks: Observable<Book[]>;
   constructor( private router: Router,
     private formbuilder: FormBuilder,
@@ -34,33 +36,36 @@ allBooks: Observable<Book[]>;
       author:new FormControl('', [Validators.required]),
     });
 
-    this.route.params.subscribe(param => {
-      console.log(param)
-      if(param && param.id){
-        let book = this.bookService.getBookById(param.id);
-        if(book){
-          this.bookForm.setValue(book);
-         
-          }
-        else this.router.navigate(['/book-list'])
-      }
-    })
-  //  this.getBookUpdateById(this.id);
+
+    this.books$ = this.route.queryParams.pipe(filter(params => params && params.id),
+     switchMap(params => this.bookService.getBookById(params.id)), shareReplay(3));
+
+     this.books$.subscribe(response =>{
+this.books= response;
+console.log('Response',this.book);
+this.setValue(this.books);
+
+     })
+
+
+
+
+
+
+   
   }
 
-// getBookUpdateById(bookId:string){
-// this.bookService.getBookById(bookId).subscribe(
-// book => { 
-// this.bookToUpdate = bookId;
 
-// console.log(this.bookToUpdate);
-// //this.bookForm.controls['id'].setValue(book.id),
-// this.bookForm.controls['name'].setValue(book.name),
-// this.bookForm.controls['category'].setValue(book.category),
-// this.bookForm.controls['author'].setValue(book.author)
 
-// });
-// }
+setValue(x:Book){
+  this.bookForm.setValue({
+    'id':x.id,
+    'name':x.name,
+    'category':x.category,
+    'author':x.author
+  });
+
+}
 updateBook(book: Book) {
   book.id= this.bookToUpdate;
   this.bookService.updateBook(this.bookForm.value).subscribe(book => {

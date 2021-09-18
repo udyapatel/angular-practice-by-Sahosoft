@@ -26,7 +26,7 @@ export class BookService {
     return this.http.post<Book>(this.url, book, this.options);
   }
 
-  getBookById(id: string): Observable<Book> {
+  getBookById(id: any): Observable<Book> {
     return this.http.get<Book>(this.url + "/" + id);
   }
   updateBook(book: Book): Observable<number> {

@@ -1,19 +1,18 @@
-<h4>Updating Book Form</h4>
+<h4>Updat Book Form</h4>
 <!-- <p *ngIf="dataSaved" ngClass="success">Record saved Successfully</p> -->
 <div class="container">
   <div class="row">
     <div class="form-bg">
-
       <form [formGroup]="bookForm" (ngSubmit)="onFormSubmit()">
-        <!-- <div class="form-group">
+        <div class="form-group">
           <label for="exampleInputFname">Book Id </label>
           <input
-            type="text"
+            type="hidden"
             class="form-control"
             formControlName="id"
             placeholder="Enter Book Id"
           />
-        </div> -->
+        </div>
         <div class="form-group">
           <label for="exampleInputFname">Book Name </label>
           <input
@@ -42,7 +41,7 @@
             placeholder="Enter Author Name"
           />
         </div>
-        <br>
+        <br />
         <div class="d-grid gap-4 d-md-flex">
           <button
             type="submit"
@@ -52,7 +51,6 @@
             Submit
           </button>
         </div>
-
       </form>
     </div>
   </div>
