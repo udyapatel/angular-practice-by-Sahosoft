@@ -17,11 +17,9 @@ import { BookService } from '../book.service';
   styleUrls: ['./update-book.component.css']
 })
 export class UpdateBookComponent implements OnInit {
-
-bookToUpdate:any;
+  dataSaved: boolean;
 books:Book;
 bookForm: FormGroup;
-books$: Observable<Book>;
 allBooks: Observable<Book[]>;
   constructor( private router: Router,
     private formbuilder: FormBuilder,
@@ -30,58 +28,55 @@ allBooks: Observable<Book[]>;
 
   ngOnInit() {
     this.bookForm = this.formbuilder.group({
-      id: new FormControl(''),
+    id: new FormControl({value: '', disabled: true}),
       name: new FormControl('', [Validators.required]),
       category: new FormControl('', [Validators.required]),
       author:new FormControl('', [Validators.required]),
     });
 
 
-    this.books$ = this.route.queryParams.pipe(filter(params => params && params.id),
-     switchMap(params => this.bookService.getBookById(params.id)), shareReplay(3));
 
-     this.books$.subscribe(response =>{
-this.books= response;
-console.log('Response',this.book);
-this.setValue(this.books);
-
-     })
-
-
-
-
-
-
-   
+this.route.paramMap.subscribe(
+  params=>{
+    const bookIds= +params.get('id');
+    if(bookIds){
+      console.log('jhsdhddbd',bookIds);
+      this.getBookId(bookIds)
+    \
+    }
+  }
+)
   }
 
-
-
-setValue(x:Book){
-  this.bookForm.setValue({
-    'id':x.id,
-    'name':x.name,
-    'category':x.category,
-    'author':x.author
-  });
-
+getBookId(id:number){
+this.bookService.getBookById(id).subscribe(
+  (iBook:Book) =>{ this.updateBook(iBook);
+});
 }
+
+
 updateBook(book: Book) {
-  book.id= this.bookToUpdate;
-  this.bookService.updateBook(this.bookForm.value).subscribe(book => {
-    this.getAllBooks();
-    console.log(this.updateBook);
-    this.bookToUpdate=null;
-  });
-   this.router.navigate(['book-list']);
+this.bookForm.setValue({
+'id':book.id,
+'name':book.name,
+'category':book.category,
+'author':book.author
+  })
+ 
 }
 
 onFormSubmit() {
   let book = this.bookForm.value;
-  this.updateBook(book);
-  this.bookForm.reset;;
-console.log(this.bookForm.value);
+  this.bookService.updateBook(book).subscribe(book => {
+    this.dataSaved = true;
+    this.updateBook(this.books);
+    console.log(book);
+    
+  });
+// this.router.navigate(['book-list']);
 }
+
+
 getAllBooks() {
   this.allBooks = this.bookService.getBooksFromStore();
 }
