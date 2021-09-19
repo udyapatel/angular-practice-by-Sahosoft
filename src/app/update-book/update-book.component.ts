@@ -17,7 +17,7 @@ import { BookService } from '../book.service';
   styleUrls: ['./update-book.component.css']
 })
 export class UpdateBookComponent implements OnInit {
-  dataSaved: boolean;
+dataSaved: boolean;
 books:Book;
 bookForm: FormGroup;
 allBooks: Observable<Book[]>;
@@ -42,38 +42,43 @@ this.route.paramMap.subscribe(
     if(bookIds){
       console.log('jhsdhddbd',bookIds);
       this.getBookId(bookIds)
-    \
+    
     }
   }
 )
   }
 
 getBookId(id:number){
-this.bookService.getBookById(id).subscribe(
-  (iBook:Book) =>{ this.updateBook(iBook);
+this.bookService.getBookById(id).subscribe(res =>
+  {
+    this.books=res;
+    console.log("gjhdgsdhgshgfhgfdjgfdhgj",res);
+    this.updateBook(this.books);
 });
 }
 
-
 updateBook(book: Book) {
-this.bookForm.setValue({
+this.bookForm.patchValue({
 'id':book.id,
 'name':book.name,
 'category':book.category,
 'author':book.author
   })
  
+
 }
 
 onFormSubmit() {
-  let book = this.bookForm.value;
-  this.bookService.updateBook(book).subscribe(book => {
+  let bookForUpdate:Book = this.bookForm.value;
+  bookForUpdate.id=this.books.id;
+  console.log('book for update',bookForUpdate.id);
+  this.bookService.updateBook(bookForUpdate).subscribe(book => {
     this.dataSaved = true;
-    this.updateBook(this.books);
-    console.log(book);
+    this.getAllBooks();
+    console.log(this.dataSaved);
     
   });
-// this.router.navigate(['book-list']);
+this.router.navigate(['book-list']);
 }
 
 
