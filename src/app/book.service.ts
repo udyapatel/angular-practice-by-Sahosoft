@@ -17,8 +17,8 @@ export class BookService {
   getBooksFromStore(): Observable<Book[]> {
     return this.http.get<Book[]>(this.url);
   }
-  getBooksFromStores(id: number): Observable<Book> {
-    return this.http.get<Book>(this.url + '/' + id);
+  getBooksFromStores(): Observable<Book> {
+    return this.http.get<Book>(this.url + '/');
   }
 
 
@@ -33,7 +33,11 @@ export class BookService {
     return this.http.put<Book>(this.url +'/'+book.id, book, this.options);
   }
 
-   
+  deleteBook(id: number): Observable<Book> {
+    return this.http.delete<Book>(this.url + "/" + id)
+      
+  }
+  
    
 
 

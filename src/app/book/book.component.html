@@ -25,7 +25,7 @@ Id:{{book.id}},   Name:{{book.name}},  Category:{{book.category}}
           <td class="s-grid gap-2 d-md-flex">
             <a class="btn btn-primary" (click)="addBook()" role="button">Add Book</a>
             <a class="btn btn-success" (click)="editBook(book.id)" role="button">Update Book</a>
-            <a class="btn btn-danger" routerLink="add-book" role="button">Delete</a>
+            <a class="btn btn-danger" (click)="deleteBook(book.id)" role="button">Delete</a>
           </td>
         </tr>
       </tbody>

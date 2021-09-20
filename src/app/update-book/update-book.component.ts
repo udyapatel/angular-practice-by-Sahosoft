@@ -40,9 +40,8 @@ this.route.paramMap.subscribe(
   params=>{
     const bookIds= +params.get('id');
     if(bookIds){
-      console.log('jhsdhddbd',bookIds);
-      this.getBookId(bookIds)
-    
+      this.getBookId(bookIds);
+    this.updateBook(this.books);
     }
   }
 )

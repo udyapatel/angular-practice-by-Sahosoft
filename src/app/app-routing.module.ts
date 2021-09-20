@@ -21,6 +21,7 @@ const routes: Routes = [
   { path: 'book-list', component: BookComponent },
   { path: 'create-book', component: AddBookComponent },
   { path: 'edit-book/:id', component: UpdateBookComponent },
+  // { path: 'book-list/:id', component: BookComponent }, 
   // { path: 'contact-us', component: ContactNoComponent },
   { path: '**',  component: PageNotFoundComponent},
 ];

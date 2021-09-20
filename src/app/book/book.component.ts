@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute, Params } from '@angular/router';
 import { Observable,map } from 'rxjs';
 import { Book } from '../../book';
 import { BookService } from '../book.service';
@@ -13,17 +13,20 @@ import { BookService } from '../book.service';
 export class BookComponent implements OnInit {
 softBooks:Observable<Book[]>;
 softsBooks:Observable<Book>;
-// books=Observable<String>;
+books:Book;
  softBook:Book[];
 
-  constructor(private bookService:BookService,private router:Router) { }
-
+  constructor(private bookService:BookService,private router:Router,private route: ActivatedRoute) { }
+ 
   ngOnInit() {
-   this.getSoftBooksById();
+  this.getSoftBooksById();
    this.getSoftBooks();
    this.getAllBooks();
+
    
-  }
+ 
+}
+  
   addBook(){
     this.router.navigate(['create-book']);
   }
@@ -42,10 +45,23 @@ softsBooks:Observable<Book>;
     this.softBooks= this.bookService.getBooksFromStore();
   }
   getSoftBooksById(){
-    this.softsBooks= this.bookService.getBooksFromStores(11);
+    this.softsBooks= this.bookService.getBooksFromStores();
   }
- 
-  // getBooksById(){
-  //   this.books= this.bookService.getBooksFromStores(11).map(book=> book.name);
-  // }
+  deleteBook(id: number) {
+    if (confirm("Delete this Book?")) {
+      this.bookService.deleteBook(id).subscribe(res => 
+        {this.getBookId(id)});
+     
+  
+    }
+  }
+  getBookId(id:number){
+    this.bookService.getBookById(id).subscribe(res =>
+      {
+        this.books=res;
+        console.log("gjhdgsdhgshgfhgfdjgfdhgj",res);
+      
+    });
+    }
+
 }
