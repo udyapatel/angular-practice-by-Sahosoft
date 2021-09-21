@@ -23,6 +23,7 @@ import { UserService } from './user.service';
 import { AdminComponent } from './admin/admin.component';
 
 import { CanActivateGuard } from './can-activate.guard';
+import { CanDeactivateGuard } from './can-deactivate.guard';
 
 
 
@@ -39,6 +40,6 @@ import { CanActivateGuard } from './can-activate.guard';
     ContactNoComponent,BookComponent,AddBookComponent,UpdateBookComponent,AdminComponent
   ],
   bootstrap:    [ AppComponent ],
-  providers:[BookService,UserService,CanActivateGuard]
+  providers:[BookService,UserService,CanActivateGuard,CanDeactivateGuard]
 })
 export class AppModule { }

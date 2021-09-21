@@ -4,6 +4,7 @@ import { AddBookComponent } from './add-book/add-book.component';
 import { AdminComponent } from './admin/admin.component';
 import { BookComponent } from './book/book.component';
 import { CanActivateGuard } from './can-activate.guard';
+import { CanDeactivateGuard } from './can-deactivate.guard';
 import { ContactNoComponent } from './contact-no/contact-no.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -18,7 +19,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'admin', component: AdminComponent , canActivate:[CanActivateGuard] },
-  { path: 'student', component: StudentComponent },
+  { path: 'student', component: StudentComponent, canDeactivate:[CanDeactivateGuard]},
   { path: 'student-details', component: StudentDetailsComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'book-list', component: BookComponent },
