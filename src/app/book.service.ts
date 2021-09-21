@@ -5,7 +5,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Book } from '../book';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class BookService {
   headers = new HttpHeaders({ 'Content-Type': 'application/json' });
   options = new HttpHeaderResponse({ headers: this.headers });

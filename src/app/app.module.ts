@@ -40,6 +40,6 @@ import { CanDeactivateGuard } from './can-deactivate.guard';
     ContactNoComponent,BookComponent,AddBookComponent,UpdateBookComponent,AdminComponent
   ],
   bootstrap:    [ AppComponent ],
-  providers:[BookService,UserService,CanActivateGuard,CanDeactivateGuard]
+  providers:[CanActivateGuard,CanDeactivateGuard]
 })
 export class AppModule { }
