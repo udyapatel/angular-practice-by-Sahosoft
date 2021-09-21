@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <a class="navbar-brand" routerLink="home" routerLinkActive="active">Home</a>
     <button
-      class="navbar-toggler"
+    (click)="toggleNavbar()" class="navbar-toggler" 
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarSupportedContent"
@@ -12,7 +12,7 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{ 'show': navbarOpen }">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
       <a class="nav-link" routerLink="admin" routerLinkActive="active">Admin</a>
