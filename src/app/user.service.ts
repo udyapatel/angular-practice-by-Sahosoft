@@ -4,5 +4,7 @@ import { Injectable } from '@angular/core';
 export class UserService {
 
   constructor() { }
-
+isAdminRights():boolean{
+return false;
+}
 }
