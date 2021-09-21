@@ -23,13 +23,13 @@ import { UserService } from './user.service';
 import { AdminComponent } from './admin/admin.component';
 
 import { CanActivateGuard } from './can-activate.guard';
-import { UserRoutingModule } from './user-routing.module';
+
 
 
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,AppRoutingModule,FormsModule,ReactiveFormsModule, HttpClientModule,UserRoutingModule,
+  imports:      [ BrowserModule, FormsModule,AppRoutingModule,FormsModule,ReactiveFormsModule, HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false }),
     ],
 
