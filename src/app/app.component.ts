@@ -29,7 +29,7 @@ export class AppComponent  {
 }
 ];
 
-constructor(private router:Router){}
+constructor(public router: Router){}
 onClick(){
   this.router.navigate(['/student']);
 }
