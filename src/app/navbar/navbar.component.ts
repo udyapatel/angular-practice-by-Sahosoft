@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, NgZone, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,14 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   navbarOpen = false;
-
-  
   constructor() { }
 
   ngOnInit() {
   }
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
+    // let element: HTMLElement = document.getElementsByClassName( 'navbar-toggler' )[ 0 ] as HTMLElement;
+    // if ( element.getAttribute( 'aria-expanded' ) == 'true' ) {
+    //     element.click();
+    // }
+    
   }
-  
-}
+
+      }

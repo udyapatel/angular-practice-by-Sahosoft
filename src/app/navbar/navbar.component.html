@@ -14,30 +14,30 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{ 'show': navbarOpen }">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent"  [ngClass]="{ 'show': navbarOpen }">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-      <a class="nav-link" routerLink="admin" routerLinkActive="active">Admin</a>
+      <a class="nav-link" routerLink="admin" routerLinkActive="active" appMenuClose>Admin</a>
     </li>
         <li class="nav-item">
-          <a class="nav-link " aria-current="page" routerLink="student">Student</a>
+          <a class="nav-link " aria-current="page" routerLink="student" appMenuClose>Student</a>
         </li> 
 
          <li class="nav-item">
-          <a class="nav-link" routerLink="student-details">Student List</a>
+          <a class="nav-link" routerLink="student-details" appMenuClose>Student List</a>
         </li> 
        
        <li class="nav-item">
-          <a class="nav-link " aria-current="page" routerLink="sign-up">Sign Up</a>
+          <a class="nav-link " aria-current="page" routerLink="sign-up" appMenuClose>Sign Up</a>
         </li>
         <!-- <li class="nav-item">
         <a class="nav-link " aria-current="page" routerLink="contact-us">Contact Us</a>
       </li> -->
       <li class="nav-item">
-        <a class="nav-link " aria-current="page" routerLink="rxjs-lib">RxJs Library</a>
+        <a class="nav-link " aria-current="page" routerLink="rxjs-lib" appMenuClose> RxJs Library</a>
       </li>
       <li class="nav-item">
-      <a class="nav-link " aria-current="page" routerLink="book-list">Book List</a>
+      <a class="nav-link " aria-current="page" routerLink="book-list" appMenuClose>Book List</a>
     </li> 
 
 
@@ -79,3 +79,19 @@
 <button class="btn btn-primary btn-lg" (click)="onClick()">Click Me</button> -->
 
 
+<!-- 
+
+<button class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          [attr.aria-expanded]="!collapsed"
+          (click)="collapsed = !collapsed"
+          (clickOutside)="collapsed == false ? collapsed = true : collapsed = false"> // this does not work as expected
+     <span class="navbar-toggler-icon"></span>
+     </button>
+
+ -->

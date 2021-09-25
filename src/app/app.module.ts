@@ -26,6 +26,7 @@ import { AdminComponent } from './admin/admin.component';
 import { CanActivateGuard } from './can-activate.guard';
 import { CanDeactivateGuard } from './can-deactivate.guard';
 import { RxjsLibraryComponent } from './rxjs-library/rxjs-library.component';
+import { MenuCloseDirective } from '../menu-close.directive';
 
 
 
@@ -39,7 +40,8 @@ import { RxjsLibraryComponent } from './rxjs-library/rxjs-library.component';
 
    declarations: [ AppComponent, HelloComponent ,CustomPipe,
     StudentComponent,StudentDetailsComponent,SignUpComponent,HomeComponent,NavbarComponent,
-    ContactNoComponent,BookComponent,AddBookComponent,UpdateBookComponent,AdminComponent,RxjsLibraryComponent
+    ContactNoComponent,BookComponent,AddBookComponent,UpdateBookComponent,AdminComponent,RxjsLibraryComponent,
+    MenuCloseDirective
   ],
   bootstrap:    [ AppComponent ],
   providers:[CanActivateGuard,CanDeactivateGuard]
