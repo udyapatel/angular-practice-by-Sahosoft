@@ -7,6 +7,7 @@ import { Component, EventEmitter, NgZone, OnInit, Output } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   navbarOpen = false;
+  selected = true;
   constructor() { }
 
   ngOnInit() {
