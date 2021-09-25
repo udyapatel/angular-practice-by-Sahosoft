@@ -19,11 +19,13 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { AddBookComponent } from './add-book/add-book.component';
 import { UpdateBookComponent } from './update-book/update-book.component';
-import { UserService } from './user.service';
+
 import { AdminComponent } from './admin/admin.component';
+
 
 import { CanActivateGuard } from './can-activate.guard';
 import { CanDeactivateGuard } from './can-deactivate.guard';
+import { RxjsLibraryComponent } from './rxjs-library/rxjs-library.component';
 
 
 
@@ -37,7 +39,7 @@ import { CanDeactivateGuard } from './can-deactivate.guard';
 
    declarations: [ AppComponent, HelloComponent ,CustomPipe,
     StudentComponent,StudentDetailsComponent,SignUpComponent,HomeComponent,NavbarComponent,
-    ContactNoComponent,BookComponent,AddBookComponent,UpdateBookComponent,AdminComponent
+    ContactNoComponent,BookComponent,AddBookComponent,UpdateBookComponent,AdminComponent,RxjsLibraryComponent
   ],
   bootstrap:    [ AppComponent ],
   providers:[CanActivateGuard,CanDeactivateGuard]
