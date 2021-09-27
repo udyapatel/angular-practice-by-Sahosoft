@@ -8,6 +8,7 @@ import { CanDeactivateGuard } from './can-deactivate.guard';
 import { ContactNoComponent } from './contact-no/contact-no.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PromiseComponent } from './promise/promise.component';
 import { RxjsLibraryComponent } from './rxjs-library/rxjs-library.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 
@@ -29,6 +30,7 @@ const routes: Routes = [
   // { path: 'book-list/:id', component: BookComponent }, 
  //{ path: 'contact-us', component: ContactNoComponent },
   { path: 'rxjs-lib', component: RxjsLibraryComponent },
+  { path: 'rxjs-lib/promise', component: PromiseComponent },
   { path: '**',  component: PageNotFoundComponent},
 ];
 
