@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { fromEvent } from 'rxjs';
 import { DesignUtilityService } from '../app-service/design-utility.service';
 
@@ -9,9 +10,10 @@ import { DesignUtilityService } from '../app-service/design-utility.service';
 })
 export class FormEventComponent implements OnInit, AfterViewInit{
   @ViewChild('addBtn')  addBtn : ElementRef;
-  constructor(private printService:DesignUtilityService) { }
+  constructor(private printService:DesignUtilityService, private router:Router) { }
 
   ngOnInit() {
+
 
   }
 ngAfterViewInit(){
@@ -28,6 +30,8 @@ let count = 1;
 
 }
 
-
+goBack(){
+this.router.navigate(['rxjs-lib']);
+}
 
 }

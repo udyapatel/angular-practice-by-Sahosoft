@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-interval',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntervalComponent implements OnInit {
 
-  constructor() { }
+obsMsg:any;
+
+constructor(private router:Router) { }
 
   ngOnInit() {
-  }
 
+    const broadCastVideos = interval(3000);
+    broadCastVideos.subscribe(res => {
+      console.log(res);
+      this.obsMsg = 'Video ' +res;
+    });
+  }
+  goBack(){
+    this.router.navigate(['rxjs-lib']);
+    }
 }
