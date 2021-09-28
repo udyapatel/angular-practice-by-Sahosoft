@@ -6,8 +6,9 @@ import { BookComponent } from './book/book.component';
 import { CanActivateGuard } from './can-activate.guard';
 import { CanDeactivateGuard } from './can-deactivate.guard';
 import { ContactNoComponent } from './contact-no/contact-no.component';
+import { FormEventComponent } from './form-event/form-event.component';
 import { HomeComponent } from './home/home.component';
-import { ObservableComponent } from './observable/observable.component';
+
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PromiseComponent } from './promise/promise.component';
 import { RxjsLibraryComponent } from './rxjs-library/rxjs-library.component';
@@ -32,7 +33,7 @@ const routes: Routes = [
  //{ path: 'contact-us', component: ContactNoComponent },
   { path: 'rxjs-lib', component: RxjsLibraryComponent },
   { path: 'rxjs-lib/promise', component: PromiseComponent },
-  { path: 'rxjs-lib/observable', component: ObservableComponent},
+  { path: 'rxjs-lib/form-event', component: FormEventComponent},
   { path: '**',  component: PageNotFoundComponent},
 ];
 

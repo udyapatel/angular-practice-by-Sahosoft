@@ -26,7 +26,8 @@ import { AdminComponent } from './admin/admin.component';
 import { CanActivateGuard } from './can-activate.guard';
 import { CanDeactivateGuard } from './can-deactivate.guard';
 import { RxjsLibraryComponent } from './rxjs-library/rxjs-library.component';
-import { ObservableComponent } from './observable/observable.component';
+import { FormEventComponent } from './form-event/form-event.component';
+
 
 
 
@@ -42,7 +43,7 @@ import { ObservableComponent } from './observable/observable.component';
    declarations: [ AppComponent, HelloComponent ,CustomPipe,
     StudentComponent,StudentDetailsComponent,SignUpComponent,HomeComponent,NavbarComponent,
     ContactNoComponent,BookComponent,AddBookComponent,UpdateBookComponent,AdminComponent,RxjsLibraryComponent,
-    ObservableComponent
+    FormEventComponent
     
   ],
   bootstrap:    [ AppComponent ],
