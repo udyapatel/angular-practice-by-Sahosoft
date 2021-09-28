@@ -1,12 +1,15 @@
 .card{
   height: 150px;
- width: auto;
+ width: calc(100% - 0px);
   border: 2px solid rgb(67, 175, 189);
   text-align: center;
   text-size-adjust: unset;
   padding-top: 40px;
   margin-bottom: 10px;
   border-radius: 4px;
+  text-overflow: initial;
+  display: flex;
+
   
   box-shadow: 0 6px 10px rgba(68, 184, 164, 0.08), 0 0 6px rgba(125, 216, 219, 0.05);
     transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
