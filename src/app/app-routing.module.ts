@@ -9,6 +9,7 @@ import { ContactNoComponent } from './contact-no/contact-no.component';
 import { FormEventComponent } from './form-event/form-event.component';
 import { HomeComponent } from './home/home.component';
 import { IntervalComponent } from './interval/interval.component';
+import { OfFromComponent } from './of-from/of-from.component';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PromiseComponent } from './promise/promise.component';
@@ -36,7 +37,7 @@ const routes: Routes = [
   { path: 'rxjs-lib/promise', component: PromiseComponent },
   { path: 'rxjs-lib/form-event', component: FormEventComponent},
   { path: 'rxjs-lib/interval', component: IntervalComponent},
-  { path: 'rxjs-lib/of-from', component: IntervalComponent},
+  { path: 'rxjs-lib/of-from', component: OfFromComponent},
   { path: '**',  component: PageNotFoundComponent},
 ];
 
