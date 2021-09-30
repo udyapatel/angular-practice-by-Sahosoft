@@ -28,6 +28,7 @@ import { CanDeactivateGuard } from './can-deactivate.guard';
 import { RxjsLibraryComponent } from './rxjs-library/rxjs-library.component';
 import { FormEventComponent } from './form-event/form-event.component';
 import { IntervalComponent } from './interval/interval.component';
+import { OfFromComponent } from './of-from/of-from.component';
 
 
 
@@ -44,7 +45,7 @@ import { IntervalComponent } from './interval/interval.component';
    declarations: [ AppComponent, HelloComponent ,CustomPipe,
     StudentComponent,StudentDetailsComponent,SignUpComponent,HomeComponent,NavbarComponent,
     ContactNoComponent,BookComponent,AddBookComponent,UpdateBookComponent,AdminComponent,RxjsLibraryComponent,
-    FormEventComponent,IntervalComponent
+    FormEventComponent,IntervalComponent,OfFromComponent
     
   ],
   bootstrap:    [ AppComponent ],

@@ -36,6 +36,7 @@ const routes: Routes = [
   { path: 'rxjs-lib/promise', component: PromiseComponent },
   { path: 'rxjs-lib/form-event', component: FormEventComponent},
   { path: 'rxjs-lib/interval', component: IntervalComponent},
+  { path: 'rxjs-lib/of-from', component: IntervalComponent},
   { path: '**',  component: PageNotFoundComponent},
 ];
 
