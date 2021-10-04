@@ -1,33 +1,69 @@
 <div class="my-3">
   <h2>Of and From</h2>
 
-  <br>
+  <br />
   <strong>Ex - 01 (OF)</strong>
-  <hr>
+  <hr />
   <div class="row">
     <div class="col-md-6">
-<p class="bg-light py-2 px-3 border rounded">
-  <strong>Data:- </strong>
-  of('Udya' ,'Vaishnavi' , 'Avani Deo')</p>
-  <hr>
-  <ul id="elContainer">
-
-  </ul>
+      <p class="bg-light py-2 px-3 border rounded">
+        <strong>Data:- </strong>
+        of('Udya' ,'Vaishnavi' , 'Avani Deo')
+      </p>
+      <hr />
+      <ul id="elContainer"></ul>
     </div>
 
     <div class="col-md-6">
       <p class="bg-light py-2 px-3 border rounded">
         <strong>Data:- </strong>
-        of(&#123; a:'Udya Patel' ,b: 'Vaishnavi Patel' , c:'Avani Deo' &#125;)</p>
-        <hr>
-        <ul >
-      <li><strong>a: </strong> {{obsMsg.a}}</li>
-      <li><strong>b: </strong>{{obsMsg.b}}</li>
-      <li><strong>c: </strong>{{obsMsg.c}}</li>
-        </ul>
-          </div>
-   
+        of(&#123; a:'Udya Patel' ,b: 'Vaishnavi Patel' , c:'Avani Deo' &#125;)
+      </p>
+      <hr />
+      <ul>
+        <li><strong>a: </strong> {{ obsMsg.a }}</li>
+        <li><strong>b: </strong>{{ obsMsg.b }}</li>
+        <li><strong>c: </strong>{{ obsMsg.c }}</li>
+      </ul>
+    </div>
   </div>
-  <br>
-  <button class="btn btn-success" type="button" (click)="goBack()">Go Back</button>
+
+
+<strong>Ex - 02 (FROM)</strong>
+  <hr >
+  <div class="row">
+    <div class="col-md-4">
+        <strong>Array</strong>
+        <hr>
+        <p class="bg-light py-2 px-3 border rounded"><strong>Data:- </strong>from(['Paul' , 'Alex', 'John']) </p>
+      <hr />
+      <ul id="elContainer3"></ul>
+    </div>
+
+    <div class="col-md-4">
+        <strong>Promise </strong>
+        <hr>
+        <p class="bg-light py-2 px-3 border rounded"><strong>Data: </strong>  Promise to Observable </p>
+      <hr />
+       <ul id="elContainer4"></ul> 
+    </div>
+
+    <div class="col-md-4">
+      <p class="bg-light py-2 px-3 border rounded">
+        <strong>Data:- </strong>
+        <!-- of(&#123; a:'Udya Patel' ,b: 'Vaishnavi Patel' , c:'Avani Deo' &#125;) -->
+      </p>
+      <hr />
+      <ul>
+        <li><strong>a: </strong> {{ obsMsg.a }}</li>
+        <li><strong>b: </strong>{{ obsMsg.b }}</li>
+        <li><strong>c: </strong>{{ obsMsg.c }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <br />
+  <button class="btn btn-success" type="button" (click)="goBack()">
+    Go Back
+  </button>
 </div>

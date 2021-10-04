@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { of } from 'rxjs';
+import { from, of } from 'rxjs';
 import { DesignUtilityService } from '../app-service/design-utility.service';
 
 @Component({
@@ -27,9 +27,24 @@ obsMsg:any;
       console.log('ObsMsg => ',res);
      // this._designUtilityService.print(res ,'elContainer');
     });
+
+
+
+    //using from() operator with array
+
+    const obs3 = from(['Paul' , 'Alex', 'John']);
+    obs3.subscribe(res =>{
+      console.log(res);
+      this._designUtilityService.print(res ,'elContainer3');
+    });;
+ //using  Promise
+
+ const promise = new Promise
+
+
   }
 
- 
+   
 
 
   goBack(){
