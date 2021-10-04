@@ -14,7 +14,7 @@ li{
 }
 .error li{
  color: red;
- background: rgba(255, 0, 0, 0);
+ background: rgba(255,0,0,0.08);
  border-color: red;
  
 }
