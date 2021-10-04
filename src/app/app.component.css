@@ -4,29 +4,3 @@ p {
 body{
   margin: auto;
 }
-.techlist{
-  margin: 0;
-  padding: 0;
- 
-}
-li{
-  list-style-type: none;
-  background: #f8f8f8;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 7px 13px;
-  margin-bottom: 10px;
-  
-}
-.error li{
- color: red;
- background: rgba(255,0,0,0.08);
- border-color: red;
- 
-}
-.completed li{
-  color: #3dd843;
-  background: rgb(61, 216, 67, 0.08);
-  border-color: #3dd843;
-
-}
