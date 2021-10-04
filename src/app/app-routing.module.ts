@@ -6,6 +6,7 @@ import { BookComponent } from './book/book.component';
 import { CanActivateGuard } from './can-activate.guard';
 import { CanDeactivateGuard } from './can-deactivate.guard';
 import { ContactNoComponent } from './contact-no/contact-no.component';
+import { CustomObservableComponent } from './custom-observable/custom-observable.component';
 import { FormEventComponent } from './form-event/form-event.component';
 import { HomeComponent } from './home/home.component';
 import { IntervalComponent } from './interval/interval.component';
@@ -18,6 +19,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { StudentComponent } from './student/student.component';
+import { ToArrayComponent } from './to-array/to-array.component';
 import { UpdateBookComponent } from './update-book/update-book.component';
 
 const routes: Routes = [
@@ -38,6 +40,9 @@ const routes: Routes = [
   { path: 'rxjs-lib/form-event', component: FormEventComponent},
   { path: 'rxjs-lib/interval', component: IntervalComponent},
   { path: 'rxjs-lib/of-from', component: OfFromComponent},
+  { path: 'rxjs-lib/to-array', component: ToArrayComponent},
+  { path: 'rxjs-lib/custom', component: CustomObservableComponent},
+
   { path: '**',  component: PageNotFoundComponent},
 ];
 

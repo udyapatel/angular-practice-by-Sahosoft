@@ -29,6 +29,9 @@ import { RxjsLibraryComponent } from './rxjs-library/rxjs-library.component';
 import { FormEventComponent } from './form-event/form-event.component';
 import { IntervalComponent } from './interval/interval.component';
 import { OfFromComponent } from './of-from/of-from.component';
+import { ToArrayComponent } from './to-array/to-array.component';
+import { CustomObservableComponent } from './custom-observable/custom-observable.component';
+
 
 
 
@@ -45,7 +48,7 @@ import { OfFromComponent } from './of-from/of-from.component';
    declarations: [ AppComponent, HelloComponent ,CustomPipe,
     StudentComponent,StudentDetailsComponent,SignUpComponent,HomeComponent,NavbarComponent,
     ContactNoComponent,BookComponent,AddBookComponent,UpdateBookComponent,AdminComponent,RxjsLibraryComponent,
-    FormEventComponent,IntervalComponent,OfFromComponent
+    FormEventComponent,IntervalComponent,OfFromComponent,ToArrayComponent,CustomObservableComponent
     
   ],
   bootstrap:    [ AppComponent ],

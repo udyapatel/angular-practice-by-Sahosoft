@@ -31,16 +31,31 @@ obsMsg:any;
 
 
     //using from() operator with array
-
-    const obs3 = from(['Paul' , 'Alex', 'John']);
+    let Arr = ['Paul' , 'Alex', 'John'];
+    const obs3 = from(Arr);
     obs3.subscribe(res =>{
       console.log(res);
       this._designUtilityService.print(res ,'elContainer3');
-    });;
- //using  Promise
+    });
 
- const promise = new Promise
+ //From -   Promise
+ const promise = new Promise(resolve =>{
+  setTimeout(() => {
+    resolve('Promise resolved');
+  }, 3000)
+ });
+const obs4 = from(promise);
+obs4.subscribe(res =>{
+  console.log('from Promise => ', res);
+  this._designUtilityService.print(res ,'elContainer4');
+});
 
+//From - String
+const obs5 = from("welcome to neoX");
+obs5.subscribe(res =>{
+  console.log('from String => ', res);
+  this._designUtilityService.print(res ,'elContainer5');
+});
 
   }
 
