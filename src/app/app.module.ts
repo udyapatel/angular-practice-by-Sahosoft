@@ -31,6 +31,7 @@ import { IntervalComponent } from './interval/interval.component';
 import { OfFromComponent } from './of-from/of-from.component';
 import { ToArrayComponent } from './to-array/to-array.component';
 import { CustomObservableComponent } from './custom-observable/custom-observable.component';
+import { MapComponent } from './map/map.component';
 
 
 
@@ -48,7 +49,8 @@ import { CustomObservableComponent } from './custom-observable/custom-observable
    declarations: [ AppComponent, HelloComponent ,CustomPipe,
     StudentComponent,StudentDetailsComponent,SignUpComponent,HomeComponent,NavbarComponent,
     ContactNoComponent,BookComponent,AddBookComponent,UpdateBookComponent,AdminComponent,RxjsLibraryComponent,
-    FormEventComponent,IntervalComponent,OfFromComponent,ToArrayComponent,CustomObservableComponent
+    FormEventComponent,IntervalComponent,OfFromComponent,ToArrayComponent,CustomObservableComponent,
+    MapComponent
     
   ],
   bootstrap:    [ AppComponent ],

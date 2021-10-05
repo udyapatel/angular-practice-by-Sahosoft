@@ -10,6 +10,7 @@ import { CustomObservableComponent } from './custom-observable/custom-observable
 import { FormEventComponent } from './form-event/form-event.component';
 import { HomeComponent } from './home/home.component';
 import { IntervalComponent } from './interval/interval.component';
+import { MapComponent } from './map/map.component';
 import { OfFromComponent } from './of-from/of-from.component';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: 'rxjs-lib/of-from', component: OfFromComponent},
   { path: 'rxjs-lib/to-array', component: ToArrayComponent},
   { path: 'rxjs-lib/custom', component: CustomObservableComponent},
+  { path: 'rxjs-lib/map', component: MapComponent},
 
   { path: '**',  component: PageNotFoundComponent},
 ];
