@@ -1,6 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
-import { count } from 'rxjs/operators';
 import { DesignUtilityService } from '../app-service/design-utility.service';
 
 @Component({
@@ -8,10 +7,11 @@ import { DesignUtilityService } from '../app-service/design-utility.service';
   templateUrl: './custom-observable.component.html',
   styleUrls: ['./custom-observable.component.css']
 })
-export class CustomObservableComponent implements OnInit, {
+export class CustomObservableComponent implements OnInit{
 techStatus;
 sub2:Subscription;
-  constructor(private _designUtilityService:DesignUtilityService) { }
+
+constructor(private _designUtilityService:DesignUtilityService) { }
 
   ngOnInit() {
 
